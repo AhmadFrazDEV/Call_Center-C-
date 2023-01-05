@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+main()
+{
+  char customer_type;
+  int mint_for_call;
+  int mint_for_call1;
+  int extra_call;
+  int extra_call1;
+  float amount_reg_call=10.0;
+  float amount_pre_call=25.0;
+  cout<<"Which type of customer do you are (regular/primere)....(r/p)";
+  cin>>customer_type;
+  if(customer_type=='r')
+  {
+  	cout<<"Enter your minutes for call....";
+  	cin>>mint_for_call;
+  	if(mint_for_call<=50)
+  	{
+  	    cout<<"Your charges are..."<<amount_pre_call;
+	}
+	if(mint_for_call>50)
+	{
+		float extra_for_call=50.0;
+		float extra=mint_for_call-extra_for_call;
+		extra*=0.2;
+		float amount_extra_call=amount_reg_call+extra;
+		cout<<"You have to pay...."<<amount_extra_call;
+	}
+  } //first if bracket
+  
+  else
+  {
+  	if(customer_type=='p')
+  	{
+  	 	cout<<"Enter your minutes for call....";
+  	  	cin>>mint_for_call1;
+  	if(mint_for_call1<=75)
+  	{
+  	    cout<<"Your charges are..."<<amount_pre_call;
+	}
+	if(mint_for_call>75)
+	{
+		float extra_for_call1=75;
+		float extra1=mint_for_call-extra_for_call1;
+		extra1*=0.10;
+		float amount_extra_call1 = amount_pre_call+extra1;
+		cout<<"You have to pay...."<<amount_extra_call1;
+	}
+  }
+  } //first else bracket
+}// main bracket
